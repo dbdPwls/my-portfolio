@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yejin's Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div class="sidebar">
+    <img class="profile-img" src="assets/profile_image.jpg" alt="Profile">
+    <div class="name">Yu Yejin</div>
+    <div class="major">Product Designer</div>
+    <div class="icons">
+        <a href="https://github.com/dbdPwls" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/8jin__f/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" onclick="copyEmail()"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; 2025</p>
+    <div class="toggle-switch">
+        <label class="switch">
+            <span id="mode-label">Light Mode</span>
+            <input type="checkbox" id="toggleDark" />
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+<div class="main">
+    <h1>Welcome to Yejin's blog!</h1>
+    <div class="post-search">
+        <input type="text" id="search" placeholder="Search posts..." oninput="searchPosts()" />
+    </div>
+    <div id="posts-container">Loading posts...</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
