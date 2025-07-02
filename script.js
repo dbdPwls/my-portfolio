@@ -25,7 +25,7 @@ function searchPosts() {
 
 function fetchPosts() {
   const container = document.getElementById("posts-container");
-  const files = ["posts/post1.json", "posts/post2.json"]; // 추가 가능
+  const files = ["posts/post1.json", "posts/post2.json", "posts/post3.json", "posts/post4.json"];
 
   container.innerHTML = ""; // 초기화
 
@@ -35,7 +35,12 @@ function fetchPosts() {
       .then(data => {
         const div = document.createElement("div");
         div.className = "post-item";
-        div.innerHTML = `<h3>${data.title}</h3><p>${data.date}</p><p>${data.summary}</p>`;
+        div.innerHTML = `
+          ${data.image ? `<img src="${data.image}" alt="${data.title}" class="post-img">` : ""}
+          <h3>${data.title}</h3>
+          <p>${data.date}</p>
+          <p>${data.summary}</p>
+        `;
         container.appendChild(div);
       })
       .catch(() => {
@@ -43,3 +48,4 @@ function fetchPosts() {
       });
   });
 }
+
